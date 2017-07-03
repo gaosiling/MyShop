@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.shop.myshop.widget.LToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:title="商城登录"
+        app:leftButtonIcon="@drawable/icon_back_32px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selector_view_block"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.shop.myshop.widget.ClearEditText
+            android:id="@+id/login_phone_cet"
+            style="@style/editText_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_telphone_32"
+            android:drawablePadding="20dp"
+            android:hint="请输入手机号"
+            android:inputType="phone" />
+
+        <View style="@style/line_vertical" />
+
+        <com.shop.myshop.widget.ClearEditText
+            android:id="@+id/login_pwd_cet"
+            style="@style/editText_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_lock"
+            android:drawablePadding="20dp"
+            android:hint="请输入登录密码"
+            android:inputType="textPassword" />
+
+        <View style="@style/line_vertical" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/bigRedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="登录" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/login_reg_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="注册账号"
+            android:textColor="@color/blue"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/login_forget_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="忘记密码"
+            android:textColor="@color/blue"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>
